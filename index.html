@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример подключения стилей</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" id="main-style">
+    <link rel="stylesheet" type="text/css" href="styles-alternate.css" id="alternate-style" disabled>
+    
+    <style>
+        body {
+            background-color: #6dcff4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Заголовок</h1>
+    <p class="important">Это важный параграф.</p>
+    <button class="button">Кнопка</button>
+    
+    <h2>Подзаголовок</h2>
+    <p class="small-text">Маленький текст.</p>
+    
+    <div class="footer">Это футер</div>
+    
+    <ul>
+        <li>Первый элемент списка</li>
+        <li>Второй элемент списка</li>
+    </ul>
+    
+    <ol>
+        <li>Первый элемент нумерованного списка</li>
+        <li>Второй элемент нумерованного списка</li>
+    </ol>
+    
+    <div class="example-class" id="unique-id">класс  ID</div>
+
+    <button onclick="toggleStyle()">Переключить стиль</button>
+    
+    <script>
+        function toggleStyle() {
+            var mainStyle = document.getElementById('main-style');
+            var alternateStyle = document.getElementById('alternate-style');
+            mainStyle.disabled = !mainStyle.disabled;
+            alternateStyle.disabled = !alternateStyle.disabled;
+        }
+    </script>
+</body>
+</html>
